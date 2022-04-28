@@ -10,6 +10,7 @@ export default function Pages(){
     return <>
         <Routes>
             <Route path="/index" element={<Index />} />
+            <Route path="/" element={<Index />} />
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/truyen/:novelId" element={<Details/>} />
