@@ -3,7 +3,7 @@ import axios from 'axios'
 const getNovel =  async () => {
     return new Promise((resolve, reject) => {
         axios
-          .get("http://localhost:3000/novels")
+          .get("https://db-truyencv.herokuapp.com/novels")
           .then((res) => {
             const { data } = res;
             resolve(data);
@@ -18,7 +18,7 @@ const getNovel =  async () => {
 const getLabel = async () => {
   return new Promise((resolve, reject) => {
      axios
-      .get("http://localhost:3000/imgLabel")
+      .get("https://db-truyencv.herokuapp.com/imgLabel")
       .then ((res) => {
          const {data} = res;
          resolve(data);
@@ -32,7 +32,7 @@ const getLabel = async () => {
 const getChap = async () => {
     return new Promise((resolve,reject)=>{
          axios
-         .get("http://localhost:3000/chap")
+         .get("https://db-truyencv.herokuapp.com/chap")
          .then((res)=>{
             const {data} = res;
             resolve(data);
@@ -47,7 +47,7 @@ const getChap = async () => {
 const addCanDy = (id, data) => {
    return new Promise((resolve, reject) => {
      axios
-       .patch(`http://localhost:3000/novels/${id}`, data)
+       .patch(`https://db-truyencv.herokuapp.com/${id}`, data)
        .then((res) => {
          const { data } = res;
          resolve(data);
