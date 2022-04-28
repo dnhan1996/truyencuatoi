@@ -1,0 +1,53 @@
+
+.page_footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-top: 15%;
+    background: #fff url(https://metruyenchu.com/assets/images/footer-bg.png) no-repeat bottom;
+    .main_footer {
+        margin: auto;
+        text-align: center;
+
+        & .logo_footer img {
+            width: 64px;
+            height: 64px;
+            
+        }
+    
+        & .content_footer {
+            width: 878px;
+            text-align: center;
+            margin: auto;
+            & p {
+                font-size: .88rem;
+            }
+        }
+
+        & .icon_footer{
+            display: flex;
+            justify-content: center;
+            padding-top: 2%;
+            & img {
+                padding: 0 3%;
+                width: 97px;
+                height: 34px;   
+            }
+        }
+
+        & .nav_footer {
+            display: flex;
+            justify-content: center;
+            padding-top: 4%;
+            & a{
+                font-size: 15px;
+                width: 156px;
+                height: 39px;
+                text-align: center;
+                padding: 0 1%;    
+            }
+        }
+    
+    }
+}

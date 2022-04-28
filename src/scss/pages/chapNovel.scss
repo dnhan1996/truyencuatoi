@@ -1,0 +1,51 @@
+.header_chapNovel{
+    .header-image{
+        display: none;
+    }
+}
+
+.main{
+    width: 100%;
+    background-color: #E4DECE;
+    height: 100vh;
+    .content {
+        width: 80%;
+        margin: auto;
+        padding-top: 5%;
+        height: 100%;
+        padding-bottom: 2%;
+        .MuiContainer-root{
+            border-radius: 15px;
+            height: 100%;
+            background-color: #EAE4D3;
+        }
+
+        & .btn_left-right {
+            display: flex;
+            justify-content: space-between;
+            & .btn_item {
+                background-color: #F0ECDF;
+                width: 157px;
+                height: 30px;
+                @include flex-center;
+                border-radius: 20px;
+            }
+        }
+
+        & .name_chap {
+            p {
+                text-align: left;
+                font-size: 2.5rem;
+                color: #333;
+                margin: 0;
+            }
+        } 
+    }
+
+    .btn-lr{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+

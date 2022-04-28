@@ -1,0 +1,17 @@
+@media screen and (max-width: 420px) {
+    .nav_menu {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        background-color: orange;
+        width: 100%;
+
+        & .nav_menu_clone {
+            display: flex;
+            .nav_menu-icon {
+                @include flex-center;
+                padding: 0 5px;
+             }
+        }
+    }
+}

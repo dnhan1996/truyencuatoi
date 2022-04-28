@@ -1,0 +1,18 @@
+@media screen and (max-width: 420px) {
+     .page_footer {
+         top: 0;
+         .main_footer {
+             .content_footer {
+                width: 70%;
+             }
+             & .nav_footer{
+                 display: flex;
+                 flex-wrap: wrap;
+                  & a {
+                      width: 100%;
+                      text-align: left;
+                  }
+             }
+         }
+     }
+}

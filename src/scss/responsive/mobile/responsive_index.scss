@@ -1,0 +1,90 @@
+@import '../mobile/responsive_pageHeader';
+@import '../mobile/responsive_navHeader.scss';
+@import '../mobile/responsive_cardRank.scss';
+
+
+@media screen and (max-width: 420px){
+    .page_header-pc{
+        display: none;
+    }
+    .page_header-mobile{
+        display: block !important;
+    }
+    
+    .main-body {
+        display: none;
+    }
+
+    .main-body-mobile {
+        display: block !important;
+        & .container {
+            & .container_reading, .container_update p {
+                font-size: 15px;
+                font-weight: 900;
+                color: #333;
+            }
+
+            & .container_update {
+                & .update_content {
+                    & .update-table {
+                        #tbUpdate {
+                            .tbUpdate_name {
+                                font-weight: 700;
+                                margin: 0;
+                                font-size: 14px;
+                            }
+
+                            .tbUpdate_in4 {
+                                font-weight: 100;
+                                font-size: 13px;
+                                display: flex;
+                                & span {
+                                    padding-right: 10px;   
+                                    color: #666!important;                           
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+
+            & .container_ranking {
+                & .ranking_content {
+                    & p {
+                        font-size: 15px;
+                        font-weight: 900;
+                        color: #333;
+                    }
+                }
+
+                & .ranking_content-main {
+                    & .ranking_choose {
+                        display: flex;
+                        justify-content: space-around;
+                        font-size: 15px;
+                        font-weight: 600;
+                        color: #333;
+                        cursor: pointer;
+                    }
+
+                    & .rank_popular, .rank_flower {
+                        display: none;
+                        margin-top: 5%;
+                        width: 100%;
+                    }
+                }
+            }
+
+            #slider_editor {
+                margin-top: 10%;
+               
+            }
+
+        }
+    }
+
+    #main_footer{
+        display: none;
+    }
+}

@@ -1,0 +1,36 @@
+.rank__view {
+    width: 33.33%;
+    height: fit-content;
+    padding: 2%;
+    margin: 5% 1%;
+    box-shadow: 0 10px 25px 0 #d7d4ce;
+    border-radius: 10px;
+    & .rank__view-content {
+        padding-bottom: 10%;
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    & .rank__view-list-content {
+       display: flex;
+       flex-wrap: wrap;
+       & .rank_nameTruyen {
+           width: 100%;
+           display: flex;
+           justify-content: space-between;
+
+           & span {
+               height: 43px;
+           }
+
+           & .r_nameTruyen {
+               @include setting-three_point;
+            
+           }
+           & .r_popular {
+               padding-right: 1%;
+           }
+       }
+       
+    }
+}

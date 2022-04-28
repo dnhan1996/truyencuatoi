@@ -1,0 +1,26 @@
+.slide {
+    transform: scale(0.7);
+    transition: transform 300ms;
+    opacity: 0.5;
+  }
+  
+  .slick-list {
+    padding-left: 6%;
+  }
+  .slideWrapper {
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+
+  }
+  
+  .slideWrapper img{
+    max-width: 100%;
+    cursor: pointer;
+  }
+  
+
+  
+  .slide {
+      transform: perspective(1000px) rotateY(40deg)  scale(0.8) ;
+  }

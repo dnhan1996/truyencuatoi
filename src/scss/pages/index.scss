@@ -1,0 +1,305 @@
+@import '../components/pageHeader.scss';
+@import '../components/cardNovel.scss';
+@import '../components/cardRank.scss';
+@import '../components/cardNovelRate.scss';
+@import '../components/slider.scss';
+@import '../components/mainSlider.scss';
+@import '../components/pageFooter.scss';
+@import '../components/signIn.scss';
+// Responsive 
+@import '../responsive/mobile/responsive_index.scss';
+@import '../responsive/mobile/responsive_card.scss';
+@import '../responsive/mobile/responsive_slider.scss';
+@import '../responsive/mobile/responsive_footer.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #666;
+    a {
+        text-decoration: none;
+        color: #666;
+    }
+    
+    a:hover {
+        color: orange;
+    }
+    .page_header-mobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 721px) {
+    .main-body-mobile {
+        display: none;
+    }
+}
+.main-body {
+    @include main-container;
+    margin: auto;
+    top: 200px;
+    & .see_all {
+        cursor: pointer;
+        &:hover {
+            color : orange
+        }
+     }
+    & #nominations {
+        width: 100%;
+    }
+    & .main-container{
+        display: flex;
+        width: 98%;
+        margin: auto;
+
+        & .editor {
+            padding-right: 10px;
+        }
+        & .container-left {
+            display: flex;
+            flex-wrap: wrap;
+            width: 743px;
+        }
+    
+        & .container-right {
+            width: 357px;
+        }
+    }
+
+    & #update {
+        & .update-content {
+            & p {
+               font-weight: 800; 
+            }
+        }
+        & .update-table{
+            & table {
+                width: 100%;
+                & tr td{
+                    cursor: pointer;
+                    padding-left: 1%;
+                    padding: 1% 0;
+                    text-align: left;
+                    
+                }
+
+                tr:nth-child(4n-4),
+                tr:nth-child(4n-2),
+                tr:nth-child(4n) {
+                background-color: #FAFAFA;
+                }
+
+                .td-highlight:hover {
+                    color: orange;
+                }
+            } 
+        }
+    }
+
+    #rank-session{
+        display: flex;
+        & .maxPopularItem {
+            width: 100%;
+            padding-bottom: 5%;
+        }
+        & .ul-maxPopularItem {
+            position: relative;
+            margin: 0;
+            padding: 0;
+
+            & li {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                cursor: pointer;
+
+                & .item_top-content {
+                   
+                    p {
+                    margin: 0;
+                    width: 100%;
+
+                    }
+                    & .item_top-name {
+                        display: flex;
+                        width: 250px;
+                        & :hover {
+                            color: orange;
+                        }
+                        & .img_name-index {
+                            width: 20px;
+                            margin-right: 4%; 
+                            padding: 0;                    
+                        }
+                    }
+
+                    & .item_nameTruyen {
+                        padding: 0;
+                        @include setting-three_point_2;
+                        margin: 0;
+                        & a{
+                            text-decoration: none;
+                            color: #666;
+                            font-weight: 500;
+                        }
+                    }
+
+                    & .item-p {
+                        font-size: 14px;
+                        display: flex;
+                        & .top_popular-icon {
+                            font-size: 15px;
+                            padding-left: 5px;
+                            color: green;                      
+                        }
+                    }
+               
+                } 
+            }
+            & .img_top-rank {      
+                transform: perspective(70px) rotateY(-10deg);
+                width: 70px;
+                height: 105px;
+                outline: 1px solid transparent;
+                margin: 0;
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+    
+            }
+            & .img_top-rank::after {      
+                position: absolute;
+                z-index: 2;
+                top: 2%;
+                left: 99%;
+                width: 10%;
+                height: 96%;
+                content: " ";
+                -webkit-transform: perspective(70px) rotateY(30deg);
+                -moz-transform: perspective(70px) rotateY(30deg);
+                transform: perspective(70px) rotateY(30deg);
+                background-color: #efefef;
+                -webkit-box-shadow: inset 0 0 5px #333;
+                -moz-box-shadow: inset 0 0 5px #333;
+                box-shadow: inset 0 0 5px #333;
+                
+            }
+        }
+        
+        & .list-popular {
+            width: 100%;
+            cursor: pointer;
+            & .rank_name-index {
+                text-align: left;
+            }
+            & .r_nameTruyen {
+                font-size: 14px;
+                float: left !important;
+            }
+
+            & :hover {
+                color: orange;
+            }
+        }
+
+        & .rank__view {
+            & .rank__view-content {
+                & .rank__view-content_content1 {
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: #333;
+
+                }
+            }
+        }
+    }
+
+    & #section_rating {
+        display: flex;
+        & .rating_content {
+            width: 770px;
+            margin: 0;
+            & .rating_content-header{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            & .rating_card{
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+
+        & .rating_comment {
+            padding-left: 2%;
+            width: 400px;
+            & .rating_comment-header  {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            & .rating_comment-content{
+                width: 322px;
+                height: 170px;
+            }
+        }
+    }
+
+    #section_new-novel {
+        display: flex;
+        padding-top: 5%;
+        & .main-section_new-novel {
+            width: 370px;
+            background-color: #F7F5F0;
+        }
+
+        & .slider_new-novels{
+            width: 322px;
+            height: 170px;
+        }
+
+        
+        & .section_header {
+            display: flex;
+            justify-content: space-between;
+            width: 370px;
+            padding-top: 3%;
+            padding-bottom: 5%;
+            .section_header-content {
+                padding-left: 5%;
+                font-weight: 800;
+            }
+         }
+
+         & .complete-section_new-novel {
+             padding-left: 3%;
+            & .complete-section_new-novel_content {
+                display: flex;
+                justify-content: space-between;
+                & .complete_content_span1 {
+                    font-weight: 800;
+                    padding-top: 1%;
+                }
+            }
+            & .complete-section_new-novel_list {
+                display: flex;
+                flex-wrap: wrap;
+
+                
+            }
+         }
+
+      
+         
+    }
+     #main_footer {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     
+     }  
+}
+
