@@ -10,7 +10,7 @@ import store from "../stateManagements/store/store";
 import { getLabelsStore, getNovelStore } from '../stateManagements/actions/actions';
 
 
- export default function PageHeader(){
+function PageHeader(){
      //GET IMAGE FROM LABEL
     const storeLabel = useSelector(state => state.labels)
 
@@ -114,3 +114,4 @@ import { getLabelsStore, getNovelStore } from '../stateManagements/actions/actio
     </>
 }
 
+export default memo(PageHeader)
