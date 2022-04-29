@@ -47,7 +47,7 @@ const getChap = async () => {
 const addCanDy = (id, data) => {
    return new Promise((resolve, reject) => {
      axios
-       .patch(`https://db-truyencv.herokuapp.com/${id}`, data)
+       .patch(`https://db-truyencv.herokuapp.com/novels/${id}`, data)
        .then((res) => {
          const { data } = res;
          resolve(data);
