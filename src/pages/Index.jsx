@@ -45,7 +45,7 @@ export default function Index(props){
 //Call API
     useEffect(() => {
         getAllNovels();
-         getListLabel();
+      
     },[])
 
     const getAllNovels = () => {
@@ -56,19 +56,6 @@ export default function Index(props){
         ).catch( (error) => console.log(error))
    
     }
-
-//GET IMAGE LABEL
-    
-    const getListLabel = () => {
-        APIServer.getLabel().then((response) => {
-            store.dispatch(getLabelsStore(response))
-            
-        }).catch((error) => console.log(error));
-    }
-
-
-
-    
 
 //GET appoint  items from list data
     const chooseNovel = storeNovels.filter(item => item.appoint === 'true')

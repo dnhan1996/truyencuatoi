@@ -24,8 +24,7 @@ function PageHeader(){
     const getListLabel = () => {
         APIServer.getLabel().then((response) => {
             store.dispatch(getLabelsStore(response))
-            listLB = response;
-            console.log("res label",response)
+            listLB.push(response);
             setListLabel(listLB)
             
         }).catch((error) => console.log(error));
