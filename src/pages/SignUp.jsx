@@ -12,7 +12,7 @@ export default function SignUp(props){
             <div className="main-left">
                 <Container>
                 <div className="logoLogin">
-                            <img src={logoLogin} alt="#" />
+                            <Link to="/index"><img src={logoLogin} alt="#" /></Link>
                         </div>
                         <div className="contain">
                             <p>ĐĂNG KÝ NGAY</p>
