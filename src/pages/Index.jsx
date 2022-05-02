@@ -247,10 +247,10 @@ return <>
                                         maxItemViews.map(item => <li key={item.id} className="item-maxPopularItem">
                                                                         <div className="item_top-content">  
                                                                             <div className='item_top-name'>
-                                                                                <p className='img_name-index'>
+                                                                                <p className='img_name-index' >
                                                                                     <img src="https://metruyenchu.com/assets/images/icons/medal-1.svg" alt="#"/>
                                                                                 </p> 
-                                                                                <p className='item_nameTruyen'>{item.nameTruyen}</p>
+                                                                                <p className='item_nameTruyen' onClick={() => sendIdFromDetail(item.id)}>{item.nameTruyen}</p>
                                                                             </div>
                                                                             <p className='item-p'>
                                                                                 {item.popular.toLocaleString()} 
@@ -280,7 +280,7 @@ return <>
                                 {
                                     arrSortView.map((item,index) => item.map(pars => <li key={pars.id} className="rank_nameTruyen">   
                                                                                         <span className='rank_name-index'>{index+2}</span>       
-                                                                                        <span  className="r_nameTruyen" >{pars.nameTruyen} </span>
+                                                                                        <span  className="r_nameTruyen" onClick={() => sendIdFromDetail(pars.id)}>{pars.nameTruyen} </span>
                                                                                         <span className="r_popular">{pars.popular.toLocaleString()}</span>
                                                                                     </li>))
                                 }
@@ -305,7 +305,7 @@ return <>
                                                                                 <p className='img_name-index'>
                                                                                     <img src="https://metruyenchu.com/assets/images/icons/medal-1.svg" alt="#"/>
                                                                                 </p> 
-                                                                                <p className='item_nameTruyen'>{item.nameTruyen}</p>
+                                                                                <p className='item_nameTruyen' onClick={() => sendIdFromDetail(item.id)}>{item.nameTruyen}</p>
                                                                             </div>
                                                                             <p className='item-p'>
                                                                                 {item.candy.toLocaleString()} 
@@ -335,7 +335,7 @@ return <>
                                 {
                                     arrSortPopular.map((item,index) => item.map(pars => <li key={pars.id} className="rank_nameTruyen">   
                                                                                             <span className='rank_name-index'>{index+2}</span>       
-                                                                                            <span  className="r_nameTruyen" >{pars.nameTruyen} </span>
+                                                                                            <span  className="r_nameTruyen"onClick={() => sendIdFromDetail(pars.id)} >{pars.nameTruyen} </span>
                                                                                             <span className="r_popular">{pars.candy.toLocaleString()}</span>
                                                                                         </li>))
                                 }
@@ -361,7 +361,7 @@ return <>
                                                                                 <p className='img_name-index'>
                                                                                     <img src="https://metruyenchu.com/assets/images/icons/medal-1.svg" alt="#"/>
                                                                                 </p> 
-                                                                                <p className='item_nameTruyen'>{item.nameTruyen}</p>
+                                                                                <p className='item_nameTruyen' onClick={() => sendIdFromDetail(item.id)}>{item.nameTruyen}</p>
                                                                             </div>
                                                                             <p className='item-p'>
                                                                                 {item.flower.toLocaleString()} 
@@ -391,7 +391,7 @@ return <>
                                 {
                                     arrFlower.map((item,index) => item.map(pars => <li key={pars.id} className="rank_nameTruyen">  
                                                                                         <span className='rank_name-index'>{index+2}</span>       
-                                                                                        <span  className="r_nameTruyen" >{pars.nameTruyen} </span>
+                                                                                        <span  className="r_nameTruyen" onClick={() => sendIdFromDetail(pars.id)}>{pars.nameTruyen} </span>
                                                                                         <span className="r_popular">{pars.flower.toLocaleString()}</span>
                                                                                     </li>))
                                 }
@@ -409,7 +409,7 @@ return <>
              </div>
              <div className="rating_card">
                   {
-                     arrRating.map(item =><CardNovelRate key={item.id} name={item.nameTruyen} img={item.img} intro={item.intro} tag={item.tag} author={item.author} rating={item.rate} sendID={true}/>)
+                     arrRating.map(item =><CardNovelRate key={item.id} name={item.nameTruyen} idItem={item.id} img={item.img} intro={item.intro} tag={item.tag} author={item.author} rating={item.rate} sendID={true}/>)
                   }
              </div>
         </div>
