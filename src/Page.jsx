@@ -5,6 +5,7 @@ import ChapNovel from "./pages/ChapNovel"
 import Details from "./pages/Details"
 import Index from "./pages/Index"
 import SignUp from "./pages/SignUp"
+import PageSearch from "./pages/PageSearch"
 
 export default function Pages(){
     return <>
@@ -13,6 +14,7 @@ export default function Pages(){
             <Route path="/" element={<Index />} />
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/tim-kiem" element={<PageSearch />} />
             <Route path="/truyen/:novelId" element={<Details/>} />
             <Route path="/chuong/:chapId" element={<ChapNovel/>} />
         </Routes>

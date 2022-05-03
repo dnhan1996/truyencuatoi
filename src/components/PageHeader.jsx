@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 import APIServer from "../APIServer";
 
 import store from "../stateManagements/store/store";
-import { getLabelsStore, getNovelStore } from '../stateManagements/actions/actions';
+import { getLabelsStore } from '../stateManagements/actions/actions';
+import Swal from "sweetalert2";
 
 
 function PageHeader(){
@@ -16,6 +17,8 @@ function PageHeader(){
 
     //GET IMAGE LABEL
     const [listLabel, setListLabel] = useState([]); 
+    //GET name novel 
+    const [listChar, setListChar] = useState('')
     
     useEffect(()=>{
         getListLabel()
@@ -48,6 +51,23 @@ function PageHeader(){
     const getItemByID = storeLabel.filter(item => item.id === idRadom )
     const imgURL = getItemByID.map(item => item.url);
     console.log("getItemByID",getItemByID.map(item => item.url))
+
+    //get name novels from input 
+    const handleSearch = () => {
+        let valueText = document.getElementsByClassName("search-text")[0].value;
+        sessionStorage.setItem("nameNovel",valueText)
+
+    }
+
+    //error 
+    const callError = () => {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Chức năng đang bảo trì!',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
+    }
     return <>
         <nav className="nav-header">
             {/* header responsive for PC*/}
@@ -89,10 +109,10 @@ function PageHeader(){
                          
                        </li>
                        <li className="inputSearch">
-                           <input type="text" placeholder="Tìm kiếm" />
-                            <button className="btnSearch"><BiSearch  className="iconSearch"/></button> 
+                           <input type="text" placeholder="Tìm kiếm" className="search-text"/>
+                            <button className="btnSearch"><Link to="/tim-kiem"><BiSearch  className="iconSearch" onClick={()=> handleSearch()}/></Link></button> 
                        </li>
-                       <li  className="btnOrange  btnUpload">Đăng Truyện</li>
+                       <li  className="btnOrange  btnUpload"  onClick={() => callError()}>Đăng Truyện</li>
                        <li className="btnLogin">
                            <Link to="/sign-in"><span className="btnOrange">Đăng Nhập</span></Link>
               
