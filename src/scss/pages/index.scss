@@ -116,7 +116,7 @@ body {
                     cursor: pointer;
     
                     & .item_top-content {
-                       
+                       width: 100%;
                         p {
                         margin: 0;
                         width: 100%;
@@ -124,7 +124,7 @@ body {
                         }
                         & .item_top-name {
                             display: flex;
-    
+                            width: 100%;
                             & :hover {
                                 color: orange;
                             }
