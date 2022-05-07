@@ -17,6 +17,7 @@ import APIServer from "../APIServer";
 import { getChapsStore, getNovelStore } from '../stateManagements/actions/actions';
 
 import store from "../stateManagements/store/store";
+import Swal from "sweetalert2";
 
 
 export default function Details(){
@@ -86,7 +87,14 @@ const sendIdFromDetail = (id) => {
     const firstChap = listChapItem.filter(item => item.id === minChap)
     const firstId = firstChap.map(item => item.id)
     
-
+//Sweet Alert 
+const updateSuccess = () => {
+    Swal.fire(
+        'Amazing!',
+        'Tặng hoa thành công!',
+        ' Good job em!'
+      )
+}
 //UPDATE flower
 const onHandleUpdate = (id) => {
     const flower = storeNovels.map(item => item.id === id ? {...item, flower: item.flower += 100 } : item)
@@ -97,10 +105,11 @@ const onHandleUpdate = (id) => {
     console.log("dataCandyUpdate",dataCandyUpdate)
     APIServer.addCanDy(id,dataCandyUpdate).then(response => {
         setNumberFlower(response)
-
 })
-
+updateSuccess()
 }
+
+
 
     return <>
 <PageHeader/>
